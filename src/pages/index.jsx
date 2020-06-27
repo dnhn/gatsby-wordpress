@@ -19,7 +19,9 @@ export default ({
           </Link>
           <span>{p.date}</span>
           <p
-            dangerouslySetInnerHTML={{ __html: p.excerpt }}
+            dangerouslySetInnerHTML={{
+              __html: p.excerpt.replace(' [&hellip;]', '…'),
+            }}
           />
         </li>
       ))}
