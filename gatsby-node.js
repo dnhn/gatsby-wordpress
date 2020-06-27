@@ -1,3 +1,4 @@
+const Page = require.resolve('./src/templates/page.jsx');
 const Post = require.resolve('./src/templates/post.jsx');
 
 exports.createPages = async ({
@@ -6,10 +7,22 @@ exports.createPages = async ({
 }) => {
   const {
     data: {
+      allWordpressPage: { nodes: pages },
       allWordpressPost: { edges: posts },
     },
   } = await graphql(`
     query {
+      allWordpressPage(
+        sort: {
+          fields: menu_order,
+          order: ASC
+        }
+      ) {
+        nodes {
+          id
+          path
+        }
+      }
       allWordpressPost(
         sort: {
           fields: date,
@@ -36,6 +49,17 @@ exports.createPages = async ({
       }
     }
   `);
+
+  pages.forEach(({
+    id,
+    path,
+  }) => {
+    createPage({
+      path,
+      component: Page,
+      context: { id },
+    });
+  });
 
   posts.forEach(({
     next: nextPost,
