@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-wordpress",
+  "version": "1.0.0",
+  "description": "Gatsby from WordPress",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "npm run clean && gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^2.23.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
