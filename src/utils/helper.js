@@ -1,1 +1,6 @@
-export const hellipReplacer = s => s.replace(' [&hellip;]', '…');
+export const parseHtmlEntities = s => {
+  const element = document.createElement('div');
+  element.innerHTML = s;
+
+  return element.textContent.replace(' […]', '…');
+};

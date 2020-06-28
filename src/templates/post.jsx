@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { parseHtmlEntities } from '../utils/helper';
 
 export default ({
   pageContext: { previousPost, nextPost },
@@ -13,18 +14,16 @@ export default ({
 }) => (
   <div>
     {previousPost && (
-      <Link
-        to={previousPost.path}
-        dangerouslySetInnerHTML={{ __html: previousPost.title }}
-      />
+      <Link to={previousPost.path}>
+        {parseHtmlEntities(previousPost.title)}
+      </Link>
     )}
     {nextPost && (
-      <Link
-        to={nextPost.path}
-        dangerouslySetInnerHTML={{ __html: nextPost.title }}
-      />
+      <Link to={nextPost.path}>
+        {parseHtmlEntities(nextPost.title)}
+      </Link>
     )}
-    <h2 dangerouslySetInnerHTML={{ __html: title }} />
+    <h2>{parseHtmlEntities(title)}</h2>
     <span>{date}</span>
     <div dangerouslySetInnerHTML={{ __html: content }} />
   </div>
