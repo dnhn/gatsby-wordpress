@@ -26,7 +26,7 @@ export default ({
     )}
     <h2 dangerouslySetInnerHTML={{ __html: title }} />
     <span>{date}</span>
-    <p dangerouslySetInnerHTML={{ __html: content }} />
+    <div dangerouslySetInnerHTML={{ __html: content }} />
   </div>
 );
 

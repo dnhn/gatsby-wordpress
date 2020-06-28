@@ -6,7 +6,7 @@ export default ({
 }) => (
   <div>
     <h1 dangerouslySetInnerHTML={{ __html: title }} />
-    <p dangerouslySetInnerHTML={{ __html: content }} />
+    <div dangerouslySetInnerHTML={{ __html: content }} />
   </div>
 );
 
