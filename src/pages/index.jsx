@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { parseHtmlEntities } from '../utils/helper';
 
 export default ({
   data: { allWordpressPost: { nodes } },
 }) => (
   <div>
+    <Helmet title='Home' />
     <ul>
       {nodes.map(p => (
         <li key={p.id}>

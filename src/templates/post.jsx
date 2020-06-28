@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { parseHtmlEntities } from '../utils/helper';
 
 export default ({
@@ -13,6 +14,7 @@ export default ({
   },
 }) => (
   <div>
+    <Helmet title={parseHtmlEntities(title)} />
     {previousPost && (
       <Link to={previousPost.path}>
         {parseHtmlEntities(previousPost.title)}
