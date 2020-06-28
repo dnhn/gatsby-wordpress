@@ -11,6 +11,7 @@ module.exports = {
         hostingWPCOM: false,
         useACF: false,
         verboseOutput: true,
+        includedRoutes: ['**/posts'],
       },
     },
     {
