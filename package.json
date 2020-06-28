@@ -6,7 +6,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "serve": "npm run clean && gatsby serve"
+    "serve": "npm run build && gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.23.11",

@@ -24,7 +24,7 @@ export default ({
         dangerouslySetInnerHTML={{ __html: nextPost.title }}
       />
     )}
-    <h1 dangerouslySetInnerHTML={{ __html: title }} />
+    <h2 dangerouslySetInnerHTML={{ __html: title }} />
     <span>{date}</span>
     <p dangerouslySetInnerHTML={{ __html: content }} />
   </div>

@@ -2,16 +2,12 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 export default ({
-  data: {
-    allWordpressPost: { nodes },
-    site: { siteMetadata: { title } },
-  },
+  data: { allWordpressPost: { nodes } },
 }) => (
   <div>
-    <h1>{title}</h1>
     <ul>
       {nodes.map(p => (
-        <li>
+        <li key={p.id}>
           <Link to={p.path}>
             <h2
               dangerouslySetInnerHTML={{ __html: p.title }}
@@ -31,11 +27,6 @@ export default ({
 
 export const query = graphql`
 query {
-  site {
-    siteMetadata {
-      title
-    }
-  }
   allWordpressPost(
     sort: {
       fields: date,
@@ -43,6 +34,7 @@ query {
     }
   ) {
     nodes {
+      id
       title
       excerpt
       date(fromNow: true, locale: "vi")
