@@ -6,7 +6,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "serve": "npm run build && gatsby serve"
+    "serve": "npm run build && gatsby serve",
+    "deploy": "npm run build && netlify deploy"
   },
   "dependencies": {
     "gatsby": "^2.23.11",
