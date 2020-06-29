@@ -1,6 +1,5 @@
-export const parseHtmlEntities = s => {
-  const element = document.createElement('div');
-  element.innerHTML = s;
+import HE from 'he';
 
-  return element.textContent.replace(' […]', '…');
-};
+export const parseHtmlEntities = s => HE.decode(s);
+
+export const replaceHellip = s => s.replace(' [&hellip;]', '…');

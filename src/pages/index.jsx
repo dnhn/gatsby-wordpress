@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { parseHtmlEntities } from '../utils/helper';
+import { parseHtmlEntities, replaceHellip } from '../utils/helper';
 
 export default ({
   data: { allWordpressPost: { nodes } },
@@ -15,7 +15,9 @@ export default ({
             <h2>{parseHtmlEntities(p.title)}</h2>
           </Link>
           <span>{p.date}</span>
-          <p>{parseHtmlEntities(p.excerpt)}</p>
+          <div
+            dangerouslySetInnerHTML={{ __html: replaceHellip(p.excerpt) }}
+          />
         </li>
       ))}
     </ul>
