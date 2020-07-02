@@ -2,7 +2,9 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-export default ({ children }) => {
+import css from './index.module.css';
+
+export default ({ children, location }) => {
   const {
     site: { siteMetadata: { title } },
   } = useStaticQuery(graphql`
@@ -15,13 +17,26 @@ export default ({ children }) => {
     }
   `);
 
+  const IndexPage = location.pathname === '/';
+
   return (
     <main>
       <Helmet titleTemplate={`%s — ${title}`} />
       <Link to="/">
-        <h1>{title}</h1>
+        <h1
+          className={`${css.Hero} ${IndexPage ? css.HeroLarge : ''}`}
+          style={{
+            backgroundImage: `url('http://unsplash.it/1280/720')`,
+          }}
+        >
+          <div className={css.HeroOverlay}>
+            <span>{title}</span>
+          </div>
+        </h1>
       </Link>
-      {children}
+      <div className={css.MainContent}>
+        {children}
+      </div>
     </main>
   );
 };

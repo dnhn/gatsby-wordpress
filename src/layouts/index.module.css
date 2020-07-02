@@ -1,0 +1,35 @@
+.Hero {
+  position: relative;
+  margin-bottom: 0;
+  padding: 2em;
+  height: 25vh;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.HeroLarge {
+  height: 50vh;
+}
+
+.HeroOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainContent {
+  max-width: 36em;
+  margin: auto;
+  padding: 2em 1em 4em;
+}
