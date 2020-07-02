@@ -1,0 +1,17 @@
+.PostItem {
+  margin-bottom: 2em;
+}
+
+.PostDate {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-size: .75em;
+}
+
+.PostBody {
+  margin-bottom: .5em;
+}
+
+.ReadMore {
+  text-align: right;
+}
