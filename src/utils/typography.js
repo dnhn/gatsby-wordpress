@@ -6,11 +6,11 @@ export default new Typography({
   scaleRatio: 2,
   googleFonts: [
     { name: 'Livvic', styles: ['600'] },
-    { name: 'Niramit', styles: ['400', '700&display=swap'] },
+    { name: 'Niramit', styles: ['400', '400i', '700', '700i&display=swap'] },
   ],
   headerFontFamily: ['Livvic', 'sans-serif'],
   headerWeight: 600,
-  headerLineHeight: 2,
+  headerLineHeight: 1.5,
   headerColor: 'grey',
   bodyFontFamily: ['Niramit', 'sans-serif'],
   bodyWeight: 400,
