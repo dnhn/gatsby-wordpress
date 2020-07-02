@@ -26,7 +26,7 @@ export default ({
             dangerouslySetInnerHTML={{ __html: replaceHellip(p.excerpt) }}
           />
           <div className={css.ReadMore}>
-            <Link to={p.path}>Đọc tiếp ⟶</Link>
+            <Link to={p.path}>Read more ⟶</Link>
           </div>
           {i + 1 < nodes.length && <PostDivider />}
         </li>
@@ -38,6 +38,7 @@ export default ({
 export const query = graphql`
 query {
   allWordpressPost(
+    limit: 100,
     sort: {
       fields: date,
       order: DESC
@@ -47,7 +48,7 @@ query {
       id
       title
       excerpt
-      date(fromNow: true, locale: "vi")
+      date(fromNow: true)
       path
     }
   }

@@ -56,8 +56,7 @@ query($id: String!) {
     title
     content
     date(
-      formatString: "D MMMM, YYYY",
-      locale: "vi"
+      formatString: "D MMMM, YYYY"
     )
   }
 }

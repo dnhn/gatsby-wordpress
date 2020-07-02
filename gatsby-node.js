@@ -9,6 +9,7 @@ exports.createPages = async ({
   } = await graphql(`
     query {
       allWordpressPost(
+        limit: 100,
         sort: {
           fields: date,
           order: DESC
@@ -23,7 +24,7 @@ exports.createPages = async ({
             id
             title
             content
-            date(fromNow: true, locale: "vi")
+            date(fromNow: true)
             path
           }
           previous {
