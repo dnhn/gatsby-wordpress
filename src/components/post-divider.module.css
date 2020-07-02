@@ -1,0 +1,5 @@
+.PostDivider {
+  height: 1px;
+  margin-top: 2em;
+  background-image: radial-gradient(grey 0%, white 70%);
+}

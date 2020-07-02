@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { parseHtmlEntities, replaceHellip } from '../utils/helper';
+import PostDivider from '../components/post-divider';
 
 import css from './index.module.css';
 
@@ -27,6 +28,7 @@ export default ({
           <div className={css.ReadMore}>
             <Link to={p.path}>Đọc tiếp ⟶</Link>
           </div>
+          {i + 1 < nodes.length && <PostDivider />}
         </li>
       ))}
     </ul>
