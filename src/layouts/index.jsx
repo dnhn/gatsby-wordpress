@@ -26,7 +26,7 @@ export default ({ children, location }) => {
         <h1
           className={`${css.Hero} ${IndexPage ? css.HeroLarge : ''}`}
           style={{
-            backgroundImage: `url('http://unsplash.it/1280/720')`,
+            backgroundImage: `url('https://unsplash.it/1280/720')`,
           }}
         >
           <div className={css.HeroOverlay}>

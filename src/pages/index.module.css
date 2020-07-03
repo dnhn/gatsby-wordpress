@@ -3,7 +3,7 @@
 }
 
 .PostDate {
-  display: inline-block;
+  display: block;
   margin-bottom: 1em;
   font-size: .75em;
 }

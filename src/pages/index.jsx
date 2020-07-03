@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { parseHtmlEntities, replaceHellip } from '../utils/helper';
+import { replaceHellip } from '../utils/helper';
 import PostDivider from '../components/post-divider';
 
 import css from './index.module.css';
@@ -18,7 +18,7 @@ export default ({
           className={css.PostItem}
         >
           <Link to={p.path}>
-            <h2>{parseHtmlEntities(p.title)}</h2>
+            <h2 dangerouslySetInnerHTML={{ __html: p.title }} />
           </Link>
           <em className={css.PostDate}>{p.date}</em>
           <div

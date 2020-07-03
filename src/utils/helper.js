@@ -1,5 +1,5 @@
-import HE from 'he';
+import stripTags from 'striptags';
 
-export const parseHtmlEntities = s => HE.decode(s);
+export const stripHtml = s => stripTags(s);
 
 export const replaceHellip = s => s.replace(' [&hellip;]', '…');

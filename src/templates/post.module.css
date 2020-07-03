@@ -5,7 +5,7 @@
 }
 
 .Date {
-  display: inline-block;
+  display: block;
   font-size: .75em;
 }
 

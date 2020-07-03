@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { parseHtmlEntities } from '../utils/helper';
+import { stripHtml } from '../utils/helper';
 
 import css from './post.module.css';
 
@@ -16,8 +16,11 @@ export default ({
   },
 }) => (
   <div>
-    <Helmet title={parseHtmlEntities(title)} />
-    <h2 className={css.Title}>{parseHtmlEntities(title)}</h2>
+    <Helmet title={stripHtml(title)} />
+    <h2
+      className={css.Title}
+      dangerouslySetInnerHTML={{ __html: title }}
+    />
     <em className={css.Date}>{date}</em>
     <div
       className={css.Body}
@@ -31,7 +34,7 @@ export default ({
             to={previousPost.path}
           >
             <span className={css.NavLinkArrow}>⟻</span>
-            <span>{parseHtmlEntities(previousPost.title)}</span>
+            <span>{stripHtml(previousPost.title)}</span>
           </Link>
         )}
       </div>
@@ -41,7 +44,7 @@ export default ({
             className={css.NavLink}
             to={nextPost.path}
           >
-            <span>{parseHtmlEntities(nextPost.title)}</span>
+            <span>{stripHtml(nextPost.title)}</span>
             <span className={css.NavLinkArrow}>⟼</span>
           </Link>
         )}
