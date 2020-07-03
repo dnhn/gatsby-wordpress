@@ -48,7 +48,7 @@ query {
       id
       title
       excerpt
-      date(fromNow: true)
+      date(formatString: "D MMMM YYYY")
       path
     }
   }

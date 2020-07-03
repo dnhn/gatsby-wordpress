@@ -24,7 +24,7 @@ exports.createPages = async ({
             id
             title
             content
-            date(fromNow: true)
+            date
             path
           }
           previous {

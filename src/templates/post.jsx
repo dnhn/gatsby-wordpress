@@ -58,9 +58,7 @@ query($id: String!) {
   wordpressPost(id: { eq: $id }) {
     title
     content
-    date(
-      formatString: "D MMMM, YYYY"
-    )
+    date(formatString: "D MMMM YYYY, H:mm")
   }
 }
 `;
