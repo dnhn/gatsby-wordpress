@@ -7,7 +7,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'techcrunch.com',
+        baseUrl: 'blog.ted.com',
         protocol: 'https',
         hostingWPCOM: false,
         useACF: false,
