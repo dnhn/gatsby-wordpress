@@ -7,13 +7,13 @@
   text-align: center;
   text-transform: uppercase;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .HeroLarge {
-  height: 50vh;
+  height: 30vh;
 }
 
 .HeroOverlay {
@@ -29,7 +29,7 @@
 }
 
 .MainContent {
-  max-width: 36em;
+  max-width: 40em;
   margin: auto;
   padding: 2em 1em 4em;
 }
