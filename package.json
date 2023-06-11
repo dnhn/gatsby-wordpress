@@ -11,7 +11,7 @@
     "deploy": "npm run build && netlify deploy --prod"
   },
   "dependencies": {
-    "gatsby": "^4.25.7",
+    "gatsby": "^5.10.0",
     "gatsby-plugin-typography": "^2.5.6",
     "gatsby-source-wordpress": "^3.11.0",
     "react": "^16.13.1",
